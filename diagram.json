@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "author": "ECSE3038",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": 10, "left": 170, "attrs": { "pins": "i2c" } }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "lcd1:GND", "esp:GND.1", "black", [] ],
+    [ "lcd1:VCC", "esp:VIN", "red", [] ],
+    [ "lcd1:SDA", "esp:D21", "green", [] ],
+    [ "lcd1:SCL", "esp:D22", "purple", [] ]
+  ],
+  "dependencies": {}
+}
